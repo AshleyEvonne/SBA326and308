@@ -13,7 +13,15 @@ async function getData(){
 
     for (let i = 0; i< 10; i++){
 
-        newImg += `<img src = "${arrayOfData[i].thumbnail.path+"/portrait_fantastic."+arrayOfData[i].thumbnail.extension}" />`
+        newImg += `<div class="card m-2" style="width: 18rem;">
+        <img class="card-img-top" src = "${arrayOfData[i].thumbnail.path+"/portrait_fantastic."+arrayOfData[i].thumbnail.extension}">
+        <div class="card-body">
+        <h5 class="card-title">${arrayOfData[i].name}</h5>
+        <a href="${arrayOfData[i].comics.collectionURI}" class="card-text">${arrayOfData[i].comics.collectionURI}</a>
+        </div>
+        </div>`
+        
+        // `<img src = "${arrayOfData[i].thumbnail.path+"/portrait_fantastic."+arrayOfData[i].thumbnail.extension}" />`
         // let element = arrayOfData[i];
         // console.log(element.name);
     
@@ -22,13 +30,12 @@ async function getData(){
     
 }
 getData()
-// let marvelContainer = document.getElementById("marvel-container");
+
+
+
+
 
 // for (let i = 0; i< arrayOfData; i++){
 //     let element = arrayOfData[i];
 //     console.log(arrayOfData[i]);
 // }
-
-// console.log(getData()
-
-// let data = document.querySelector(".container");
